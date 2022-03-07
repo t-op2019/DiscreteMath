@@ -21,8 +21,12 @@ def binary_search(arr, left, right, x):
 def insertion_sort(arr):
     for i in range(1, len(arr)):
         val = arr[i]
-        j = binary_search(arr, 0, i - 1, val)
-        arr = arr[:j] + [val] + arr[j:i] + arr[i + 1:]
+        j = i - 1
+        insertAt = binary_search(arr, 0, j, val)
+        while j >= insertAt:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = val
 
     return arr
 
