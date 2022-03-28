@@ -1,1 +1,1 @@
-Github repository cho thành viên nhóm 2 nộp code C++/Python
+Github repository để nộp code C++/Python
